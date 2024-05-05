@@ -1,0 +1,12 @@
+อธิบาย
+ไฟล์ docker-compose-database.yml เป็นไฟล์ ที่ใช้เก็บข้อมูลdatabase ทั้งหมด ของ WORDPRESS
+ไฟล์ docker-compose-wordpress1.yml เป็นไฟล์ที่กำหนด port 81 ไว้ เพื่อใช้หน้า WEBSITE
+ไฟล์ docker-compose-wordpress2.yml เป็นไฟล์ที่กำหนด port 83 ไว้ เพื่อใช้หน้า WORDPRESS ที่งเป็นหลังบ้าน
+
+โดยที่ไฟล์ wordpress1 กับ wordpress2 เชื่อมต่อ database เดียวกัน และใช้ Volume เดียวกัน มีการ mount ไฟล์ wordpress ของ volume ไว้ที่ HOST เพื่อให้สามารถแก้ไขจากภายนอกได้และไฟล์ database ก็mount ไว้ที่เครื่อง Host เช่นเดียวกัน
+
+เมื่อปิดservice wordpress1 แล้วตัว  wordpress2 ยังสามรถทำงานต่ออยู่ได้ทำงานได้อยู่ และ เมื่อ ปิด service ทั้งหมดแล้ว start ขึ้นใหม่ ข้อมูลยังอยู่เหมือนเดิม
+
+
+
+ 
