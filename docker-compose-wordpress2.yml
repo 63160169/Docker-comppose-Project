@@ -4,7 +4,7 @@ services:
   wordpress_82:
     image: wordpress
     ports:
-      - "82:80"
+      - "83:80"
     volumes:
       - ./wordpress_data:/var/www/html
     environment:
